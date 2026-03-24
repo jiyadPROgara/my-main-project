@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+
+    <!-- Search bar -->
+     <div class="searcher">
+    <input class="search";
+    type="search" id="search" placeholder="Search for your game">
+<button id="searchBtn" type="button">Search</button>
+
+<script>
+  const games = [
+    { name: "minecraft", page: "minecraft.html" },
+    { name: "fortnite",  page: "fortnite.html" },
+    { name: "roblox",    page: "roblox.html" },
+    { name: "black ops 6",  page: "blackops6.html" },
+    { name: "rocket league", page: "rocketleague.html"},
+    // زوّد باقي الألعاب بنفس الشكل
+  ];
+
+  document.getElementById("searchBtn").addEventListener("click", function () {
+    const query = document.getElementById("search").value.toLowerCase().trim();
+console.log("Searching for:", query); // للتأكد من أن البحث يعمل ويأخذ القيمة الصحيحة
+    const game = games.find(g => g.name === query); // لازم يكتب الاسم صح
+
+    if (game) {
+      window.location.href = game.page;   // يفتح صفحة الـHTML بتاعة اللعبة
+    } else {
+      alert("Game not found");
+    }
+  });
+</script>
+</div>
+    <!-- Navigation links -->
+    <nav>
+        <a href="about.html" class="a">About</a>
+        <a href="contact.html" class="a">Contact</a>
+        <a href="index-game.html" class="a">Home</a>
+    </nav>
+
+    <!-- Image -->
+    <div>
+        <img class="image" src="C:\Users\hayaamohamed\OneDrive\Desktop\New folder\jiyad's folder\learning mid basic folder\WhatsApp Image 2026-03-24 at 12.07.42 AM.jpeg"/>
+    </div>
+    <!--paragraph-->
+    <span class="description"> Welcome to Game Catalog — your ultimate destination for discovering, exploring, and enjoying video games. This website was created to bring together a wide variety of titles in one easy-to-browse platform, helping players find the latest releases, timeless classics, and hidden gems. With powerful search tools, organized categories, and detailed descriptions, Game Catalog makes it simple to learn more about each game and decide what to play next. Built to inspire and guide gamers, it exists to make exploring new adventures both efficient and exciting.</span>
+    <p class="intro"> Game Catalog Site is designed to be your ultimate destination for discovering and exploring a wide variety of titles. Whether you’re searching for the latest releases, timeless classics, or hidden gems, our catalog brings everything together in one place with a clean, easy-to-navigate layout. Each game entry includes detailed descriptions, visuals, and quick access options, so you can find exactly what you’re looking for without hassle. With a modern design and intuitive search features, the catalog transforms browsing into an enjoyable experience, making it simple to dive into new adventures and revisit old favorites.</p>
+
+</body>
+</html>
+  
