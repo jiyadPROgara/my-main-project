@@ -21,16 +21,15 @@
     { name: "roblox",    page: "roblox.html" },
     { name: "black ops 6",  page: "blackops6.html" },
     { name: "rocket league", page: "rocketleague.html"},
-    // زوّد باقي الألعاب بنفس الشكل
+
   ];
 
   document.getElementById("searchBtn").addEventListener("click", function () {
     const query = document.getElementById("search").value.toLowerCase().trim();
-console.log("Searching for:", query); // للتأكد من أن البحث يعمل ويأخذ القيمة الصحيحة
-    const game = games.find(g => g.name === query); // لازم يكتب الاسم صح
-
+console.log("Searching for:", query); 
+    const game = games.find(g => g.name === query);
     if (game) {
-      window.location.href = game.page;   // يفتح صفحة الـHTML بتاعة اللعبة
+      window.location.href = game.page;   
     } else {
       alert("Game not found");
     }
